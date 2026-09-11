@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Blog académico de Jara Mego, Fabritzzio Andre · Universidad Nacional de San Martín · FISI">
+<meta name="theme-color" content="#7a365d">
+<title>Blog académico | Jara Mego, Fabritzzio Andre</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="progress"></div>
+<div class="topline"><div class="container"><span>Edición académica · 2026-II</span><span>Tarapoto · Perú</span></div></div>
+<header class="site-header"><div class="container navbar"><a class="masthead" href="#inicio">Cuaderno <i>FISI</i></a><button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button><nav class="nav-links" id="mobileNav"><a href="#inicio">Portada</a><a href="#publicaciones">Artículos</a><a href="#autor">Autor</a><button class="primary-action" data-open-new>Escribir entrada</button></nav></div></header>
+<main>
+<section class="cover" id="inicio"><div class="container cover-grid"><div class="cover-copy"><div class="issue">Vol. 04 · Revista estudiantil</div><h1>Aprender también es <span>publicar.</span></h1><p>Una revista-blog para presentar trabajos universitarios con contexto, criterio y una identidad personal más editorial.</p><div style="margin-top:24px"><a class="primary-action" href="#publicaciones">Leer edición</a></div></div><aside class="cover-profile" id="autor"><div class="big-initials">FA</div><h2>Jara Mego, Fabritzzio Andre</h2><p>Estudiante · Ingeniería de Sistemas e Informática</p><div class="cover-meta"><span>UNSM</span><span>FISI</span><span>IV ciclo</span><span>2026-II</span></div></aside></div></section>
+<section class="section" id="publicaciones"><div class="container"><div class="mag-head"><div><div class="issue">Índice de contenidos</div><h2>Últimas publicaciones</h2></div><div class="counter"><span id="postCount">6</span> entradas</div></div><div class="filters-wrap"><div class="filters"><button class="active" data-filter="Todos">Todo</button><button data-filter="Informe">Informes</button><button data-filter="Investigación">Investigación</button><button data-filter="Presentación">Presentaciones</button><button data-filter="Reflexión">Reflexiones</button></div><input class="search" id="searchInput" placeholder="Buscar en la edición…"></div><div class="posts-grid" id="postsGrid"></div><div class="empty" id="emptyState" hidden>No hay artículos coincidentes.</div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>Cuaderno FISI · Jara Mego, Fabritzzio Andre</span><span>UNSM · <span id="year"></span></span></div></footer>
+
+<dialog id="articleDialog" class="dialog">
+  <div class="dialog-shell article-dialog-shell">
+    <button class="dialog-close" data-close-dialog aria-label="Cerrar">×</button>
+    <div class="article-kicker" id="articleType">Publicación</div>
+    <h2 id="articleTitle">Título</h2>
+    <div class="article-course" id="articleCourse"></div>
+    <p class="article-summary" id="articleSummary"></p>
+    <div class="tags article-tags" id="articleTags"></div>
+    <div class="article-divider"></div>
+    <h3>Comentarios y aportes</h3>
+    <form id="commentForm" class="comment-form">
+      <input name="name" placeholder="Tu nombre" maxlength="60">
+      <textarea name="text" required maxlength="500" placeholder="Escribe una opinión, sugerencia o pregunta..."></textarea>
+      <button class="primary-action" type="submit">Publicar comentario</button>
+    </form>
+    <div id="commentsList" class="comments-list"></div>
+  </div>
+</dialog>
+
+<dialog id="newPostDialog" class="dialog">
+  <form id="newPostForm" class="dialog-shell">
+    <button type="button" class="dialog-close" data-close-dialog aria-label="Cerrar">×</button>
+    <div class="article-kicker">Panel del estudiante</div>
+    <h2>Nueva entrada académica</h2>
+    <p class="muted">Esta versión guarda la entrada en el navegador para que puedas probar la interfaz sin configurar una base de datos.</p>
+    <label>Título<input name="title" required maxlength="110" placeholder="Título del trabajo"></label>
+    <div class="form-row">
+      <label>Tipo
+        <select name="type">
+          <option>Informe</option><option>Mapa mental</option><option>Presentación</option><option>Investigación</option><option>Práctica</option><option>Reflexión</option>
+        </select>
+      </label>
+      <label>Curso<input name="course" required placeholder="Nombre del curso"></label>
+    </div>
+    <label>Resumen<textarea name="summary" required maxlength="420" placeholder="Explica brevemente de qué trata..."></textarea></label>
+    <label>Etiquetas<input name="tags" placeholder="sistemas, investigación, UNSM"></label>
+    <button class="primary-action" type="submit">Agregar al blog</button>
+  </form>
+</dialog>
+<script src="js/app.js" defer></script>
+</body>
+</html>
